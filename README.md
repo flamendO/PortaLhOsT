@@ -20,7 +20,8 @@ sudo chmod +x setup.sh && ./setup.sh
 
 
 # Tool Overview
-![portalhost_1](https://github.com/flamendO/PortaLhOsT/assets/78015005/ba8be430-29b0-4c7d-8c6f-6e04903a0dc3)
+![portalhost_1](https://github.com/flamendO/PortaLhOsT/assets/78015005/2f0ce8af-dd68-437d-952f-f5d761170b1e)
+
 
 # Tutorial
 
