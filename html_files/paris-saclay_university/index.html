@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>Login - CAS – Central Authentication Service</title>
+    <meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><link rel="stylesheet" type="text/css" href="Login%20-%20CAS%20%E2%80%93%20Central%20Authentication%20Service_files/normalize.css"><link rel="stylesheet" type="text/css" href="Login%20-%20CAS%20%E2%80%93%20Central%20Authentication%20Service_files/fontawesome.min.css"><link rel="stylesheet" type="text/css" href="Login%20-%20CAS%20%E2%80%93%20Central%20Authentication%20Service_files/bootstrap-grid.min.css"><link rel="stylesheet" type="text/css" href="Login%20-%20CAS%20%E2%80%93%20Central%20Authentication%20Service_files/material-components-web.css"><link rel="stylesheet" type="text/css" href="Login%20-%20CAS%20%E2%80%93%20Central%20Authentication%20Service_files/materialdesignicons.css"><link rel="stylesheet" type="text/css" href="Login%20-%20CAS%20%E2%80%93%20Central%20Authentication%20Service_files/cas.css"><link rel="icon" href="https://sso.universite-paris-saclay.fr/cas/favicon.ico" type="image/x-icon"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"></head>
+
+<body class="login mdc-typography">
+<script type="text/javascript" src="Login%20-%20CAS%20%E2%80%93%20Central%20Authentication%20Service_files/es5-shim.js"></script>
+<script type="text/javascript" src="Login%20-%20CAS%20%E2%80%93%20Central%20Authentication%20Service_files/css-vars-ponyfill.min.js"></script>
+<script type="text/javascript" src="Login%20-%20CAS%20%E2%80%93%20Central%20Authentication%20Service_files/jquery.min.js"></script>
+<script type="text/javascript" src="Login%20-%20CAS%20%E2%80%93%20Central%20Authentication%20Service_files/material-components-web.js"></script>
+
+<script type="text/javascript" src="Login%20-%20CAS%20%E2%80%93%20Central%20Authentication%20Service_files/cas.js"></script>
+
+<script>
+    resourceLoadedSuccessfully();
+    cssVars({});
+</script>
+
+<script>
+    /*<![CDATA[*/
+
+    var trackGeoLocation = false;
+
+    var googleAnalyticsTrackingId = null;
+
+    if (googleAnalyticsTrackingId != null && googleAnalyticsTrackingId != '') {
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', googleAnalyticsTrackingId, 'auto');
+        ga('send', 'pageview');
+    }
+
+    /*]]>*/
+</script>
+<div>
+    <header id="app-bar" class="mdc-top-app-bar mdc-top-app-bar--fixed mdc-elevation--z4">
+        <nav class="mdc-top-app-bar__row">
+
+                <span class="cas-brand">
+                        <span class="sr-only">CAS</span>
+                        <img src="Login%20-%20CAS%20%E2%80%93%20Central%20Authentication%20Service_files/logo.png" class="cas-logo"></span>
+
+                 <h3>Authentification Centralisée</h3>
+        </nav>
+
+    </header>
+
+    <script type="text/javascript">
+
+        (function (material) {
+            var header = {
+                init: function () {
+                    material.autoInit();
+                },
+                checkCaps: function (ev) {
+                    var s = String.fromCharCode(ev.which);
+                    if (s.toUpperCase() === s && s.toLowerCase() !== s && !ev.shiftKey) {
+                        ev.target.parentElement.classList.add('caps-on');
+                    } else {
+                        ev.target.parentElement.classList.remove('caps-on');
+                    }
+                }
+            }
+
+
+            document.addEventListener('DOMContentLoaded', function () {
+                header.init();
+
+            });
+        })(mdc);
+    </script>
+</div>
+
+<div class="mdc-drawer-scrim"></div>
+
+<div class="mdc-drawer-app-content mdc-top-app-bar--fixed-adjust d-flex justify-content-center">
+    <main role="main" id="main-content" class="container-lg py-4">
+        <div id="content" class="d-flex justify-content-center">
+
+        <div class="d-flex justify-content-center flex-md-row flex-column mdc-card mdc-card-content w-lg-50">
+            <section id="loginForm" class="login-section login-form">
+                <div class="d-flex flex-column justify-content-between m-auto">
+            <div>
+                <div id="serviceui" class="mb-4">
+            <div class="d-flex align-items-center p-2">
+                <img title="Intranet Université Paris-Saclay" alt="Intranet Université Paris-Saclay" src="Login%20-%20CAS%20%E2%80%93%20Central%20Authentication%20Service_files/logo_intranet.png" width="32" height="32"><div class="ml-2">
+                    <h2>Intranet Université Paris-Saclay</h2>
+                    <p>Intranet Université Paris-Saclay</p>
+
+                    </div>
+            </div>
+
+            </div>
+            </div>
+            <div class="form-wrapper">
+                <form method="post" id="fm1" action="login">
+
+                    <h3 class="text-center">
+                        <i class="mdi mdi-security"></i>
+                        <span>Enter Username &amp; Password</span>
+                    </h3>
+
+                    <section class="cas-field my-2=3">
+                        </section>
+
+                    <section class="cas-field my-3">
+                        <div class="mdc-text-field d-flex mdc-ripple-upgraded">
+                            <input class="mdc-text-field__input" id="username" size="25" type="text" accesskey="u" autocomplete="off" name="username"><label for="username" class="mdc-floating-label"><span class="accesskey">U</span>sername:</label>
+                        </div>
+                    </section>
+
+                    <section class="cas-field my-3 mdc-input-group">
+                        <div class="mdc-input-group-field mdc-input-group-field-append">
+                            <div class="mdc-text-field mdc-text-field--with-trailing-icon d-flex caps-check mdc-ripple-upgraded">
+                                <input class="mdc-text-field__input pwd" type="password" id="password" size="25" accesskey="p" autocomplete="off" name="password" value=""><label for="username" class="mdc-floating-label"><span class="accesskey">P</span>assword:</label>
+                            </div>
+                            <div class="mdc-text-field-helper-line caps-warn">
+                                <p class="mdc-text-field-helper-text mdc-text-field-helper-text--persistent mdc-text-field-helper-text--validation-msg text-danger">
+                                    <span>CAPSLOCK key is turned on!</span>
+                                </p>
+                            </div>
+                        </div>
+                        <button class="reveal-password mdc-button mdc-button--raised mdc-input-group-append mdc-icon-button" type="button">
+                            <i class="mdi mdi-eye reveal-password-icon"></i>
+                            <span class="sr-only">Toggle Password</span>
+                        </button>
+                    </section>
+
+                    <section class="cas-field my-3">
+                        </section>
+
+                    <section class="cas-field">
+
+                        <div>
+        </div>
+
+                        <input type="hidden" name="execution" value="77fb8bc2-a664-4d63-b6f1-a94c94777197_ZXlKaGJHY2lPaUpJVXpVeE1pSXNJblI1Y0NJNklrcFhWQ0o5Ljk5ajFfdnk3TXlaZE9KemdtXzc3U181WUdTc2JvUTQ2bHdLWm82Z05oamdvUktkTmowcmNNd3M1UWZoYXNfRFNJSmc1VndfUXpSM2d2TEVscXJQMHdRdFVULUNZc0F3SWpzeWFaS3VkNmREX2FuWlZuV292b1U0TlQ5TnZIVnkwQWVDeUFFWXJ1clNPSTdxTVpCUU5RMzhRT0w0QU13Nk9zTEZueHNGMDI0ZThNMk1yM040MkZub2RobUw1ZHl2UGZDdWJZeUVxMzVYQjU3aTZrMzlxSC1pc0hhWnBCMmdiaVFiMnkwcFp1VDFjek41blBSMXViQW9QMG9yaWdWOVgwY2VXeG11alRHOW9YSWtCaDFGWlRQX2pUNmlOSDdKZzgzbXUxa1BxZ1BkREZaYWlKclFaaFROM3RzN0JyaUd3U0JQdEl5TEJEemN2QVlMUUNnNERIWW85QktrWExSWGExejFhSGFLbTZNWEdGWGVVeUpLb2tLa2VqZ3VuanlJd0dIR3B5MjZhWGdCTTZMRlR1em41QksycTgtMXZURVlnWUNpNE45VWswd3F6N2tfOXZBZTRNQWFZaTdJU2tjRkVkSk5adW1lT08xSzlXX3ZYd0hJc29WUkZDdVVyem9MVnJlTkwzSUJDdDJxQW4wUHEwZWNHVThBdGs4bURpZWpGOFZkT0xiSVFpelVNRmx3SDhyYTJSQTdxaDlxdm81WEJvbndZU1A3Qlh4YUMxTFZLZ3dzaTRUbFN2LXVUMFVzbHJvd09lWTBSSU1uWENrcjVQdW1oQ3l3UHpMV2w1S1hiRzJha2FyNHpPRU5UWW1XOFlaYm5VeUJESjBXSHN1R0NuTTJEeDE0RW5kNDk0Z253Y3c5TmNVN1BXZDdNVlZYYjJBVVh1VzVDaXRrdUpFZ3pwbVJHNm5YWGZqUldoUnBtbmJxRVRTeVZLNFZpVW9tcmcyVXkwVmRBc0U0ZXlHY2wzaU9rdFFWeDBoNWM0b2pxX0pHdmtzTno5T2ljMDVtaFJ6RS1BNF9HbHJDNUoxdHNpMkF1dHFuWTJqeTBDOXpnRnJHeGtoYlFVUkFZNFEtdzJEZzhNemNZYk0wVnVkZmR4MVR6dDJHcG1ueDhzYmpOUGJyalFnOURKeXRacVJidGxJQ3l1dmVJYURjdFNDS3hQZkFCWV9jZFNYa2JQWEh1eEU5bTItMFpJUi1nd0FweW9ucW1ueGpiYXlVQ1RkSDZOR2ZsUjN1Q3phRTMtTWdCc09NNVI3SllLNF9uSnI4NllsMEVIcWVOR1luSjEydFJwUVFrWi1uOWdVcWc3MnYyZW5aRjRRTHk5Yk53enJyQTUxTGc5bTBVMzBfRnVYS1lsYkxNby1lQTJXakFxS1JmZmhNZmZwcTVST2FpcDBqMEdvOGNZOHZfUlBvMHQ3MC1VbGJ1V21kdUFNOHl3Yk5NczdlVENmSEljR1ptVEM3bVUyblJpMWI1X2ZhVkJ3aWhwUm1VOXlMdWpkb09qV1FXcElTbll1Q0NLVzJFVEtxSmhwbGhxbkFCdjkyc2dUdFVtVXVoOW1VUGdNaWdfWjZCOTcxQjBUMHVWeFBaR0JTcWlMdGFpYVJ3UGJCaDdxenpQcHAxUXZHa2dhOHZkTWpEUlg3Um5uV01jdzJYTkJ6ckFBZEhXQUkzc3VmN0I2cWlDd0NPX3ZDMkJSbVNnZmhjV2M0cDZkVGZYWE1fZlA2TTBuaGgyS2NPY1lnZW1femNURjNMSWxQckZ2RWtwLWFrQ2VZQXFqdThsWmxrNnNQVDZxc0MzNlJRYkJxLU85Yl9VakRqV3d3a2dHVDg2WjZaRUxjU3J6SEs1RWlBM0ZpS3o3aVV5NGNfTXRpcWpoVXpwTnlFVU5Ccmo0SWVDME9YUm9vREVhcUtabkY5dGVnMTBwRGhQMUFic0VVTUhyRTFqbDBkV1JHczdDbFF2RGw2RHdsZ0N6ajNSRU9aVUpBZTEyTkp2QTRvRGc3aXR5em84TUtJMGdmSEdoREN2cTdweUhpaTVEN3hjbGF6TUZrQlVZdEV6ZW5CaU5fdTkyN3lfc3VaSTZ0NWtnNXl3TFphNzhSQmNkZ2plakdJYk9uU0ZlNFExWkJRUnAwbUFlLUczR0NZVjIxQXVyMlQ4VHVuX3VTcGFoQVJUS25iVy1VeVNuT1U2TklFdlN2R3JHNXQ0eXpXaXN2WWFZcTBzWkplSU1abGZhbWRGTDNsUUU5N2JnSDRJZ21QMi0tYXJfV0ZQLURjaWZobHFPci1Ka2EwYzVHNTNxdkdld3E5M3VOYkFuYUNPVXMzd1phaUtCZE9STWdJZFFMbDAxNDFsTUpEeHYzNXhVR2FVRzBHYkpkaHdxT3llUE9DS3BDN2pjNVAtVVdKU2J6UTVUczNsR2ZTVEp2UEhfTXV5dFU2Q2k3Mzg4T3djX3VPZDYzN1cySDdtRkRhNnVtUWhRR1dheXhxZ0FHT3Y2M2F6Z2t1WjRoWTFwSEFDdnlJOTdPYTVsNXZUNGRBanNvUndwX2VZYWxVY0dhTkJuUGFZeG9Kcm5oSE9EQzczcnVBQ2lpQ0paVW1UT1YwVlFPUnpla3BldGZ4SF9Pcl8wVFlLXzdUMFhmak5KZEV5cmdkYlVUMG55U2RQUVpHOHlHa1otZzVTNXFESmhpVUh1eU5KMDVSZ09idmU0eThoTnhuanVEYjlPaU9vMnFySVJVbld4Uzh0dFlLamVwRU1kc0JrVnhnNExpRk5HeWpHNExrbTlad21fbEdLa2JoSlRlUjJFMlA3RlR4MEZxLXBJWXJ2UmI5bDQyMkdtc0F4SEZmemZnUFhCYjUyWHctOTRjbm04UlF4bW9TSnE1ZmVjc0FNMDdhQTNZa1RVMU1TSzdwcHVOUjNiVGJEbk1ScUFBSU9RcEFVTHVYaEFJLUozSU40Y1FobnhSX19GcnMyTHZrOU5OdzlNYkZKbFNuX25QRFpmMjFudTk1U2o2U01wajJ0MlRjNjZ3dk1qbHB2VGhrdXgyd3R1TThrYUo5aERBS3ZsbE15TkMwMlU3V28xeUk4UzdXYWE2bHZMcDBLcTFpRnltTU92WUhiQVJ3Q182LUZRSXM5cHFmOVRDYVFWQUFwQ2hnY2hEUkQyUGpSX2EtSEgtcEtUb2d0bXdpVWxhQXhfYzUzaEpkY2tZZHlKOV9sZXNpZHlkcTlzc0x6OFg4S2tZbnBEY1ladXQyNy00bDhyeW1FNVZwQzM3T3dXVXRCeER1TF8ybU5QRnpaVHFxWm4xQ3RYblBveWZCQ2FUNzQ4WGdoR2p4cDdRc0R3eHZUbjZTbldabFVYT2FFQlUtTlQyYnFMSG51WVlrMXNDakgybGtoZGN5SENvRFo3ZVZjajRqSzdIQUZ3aER1Nmw1VE5rbzVPNWtCdzNNeXVxUUJoYnNUQkZDU1hUeU51bzlJdC1iNFA0d3FQLWVIalZsMlA5dVhYcHhocTNzbWRTRjhSY2VkdWFMV09zekdwdnNhRlBNS3p3N3JzRGs5dzFOSFdmWkxxSldIVEFVNDM5MzJlUmRGQ19BTUJ0QlRXSFBzeUxMbkFtemgzTlcxaG9sSXN3TUJhdExpS2swdl9HMGMzYVlVMGpZTV90LUh5My1pUDFsQ2NJcnJWaE1tRmliM0JGYnozZUdkUE9oaFZCXzAtckJrZU1XS0V6X3RtMGh5R1hfc2JGUFNwckxZTWR0RW1XbnkwV3g4MExLOE5oMFhFSGI3Q2o3SUpPWTJCUXhIRUZ1UjJhYkdfRmtSd1k3bFdRTENreDlQZmRXSmtYMzI0Z2tKaGNkM043OS1ac2hVUjFvRlB6YXl5aWc1ZWpOMUJIblVmd2NPSHQyNHI0cTdsd0ZFaGZuYndjeWE4RlUzOE1kT3lkUHR6dldOeVZEaEhhM3ZTMDhwSGhTV09vRDZsQUtjSlR5a1l4eG93dW1OTXJjSlVjaUFtS3VVcHh0YWEtdEo1RzRVdmFON3ptZ1YtRXNBNWp1VzR1ZzJ0a0V1Z0Y2ZU1EQmdUc0RBbXg0QlZSa2RqNC1WSzN5cGpna2RlMGJVZGFBYzJDaGQ1MmlHN29XelVYVU9UM2llT1ZTSk9FakpPWG5ob0RjWW5aQ2hsYVkwdVZWRzA2ZGFpbVZnbFpYcmpvU0Q1NEw2UThfdEYyc2xibVJvTzAySDNUazFnV1Q2amdOZmJWaWdDVXgzVGRqZjlEaTVSZ3A0ZWxxY2dubkp4anJJNDNMcFBfLXNHa2dTZEhudlpxTGt5UlkwWnNDamxzWEhLbmZ4dV9nY0hBZUdnUWFvLXpiVGlPZm1sak84bjZybmU3MUZzNzEyMzFWc2xtTkRUenRyUVJEWjZzOU5YNEptMW00T1hYYUFoY3FXVTV5TDJyWFpyQW1RWHBWTGxzZGw4VmtzOThXd0kwWWlNeVZYVm92R2wtT3NyaFJtdXo5QjdLMkF3RjdZR2pNMzlWdkNMTDU1amFjamx0WGJpdHJRVjA3VDQ4ejc1WlRiYmdKTmFSOWFfZGxPNWgxTmhFVnc4LUhsaE4wdFRYY2xaT0NvVF9RaGR4aGFhTEtRajVzV1BVQ1JQakd5MzUtd3FGTkZwOEhFYWx6ZDlHLXBMeHpCamViWlpjLU1RUEp3STdJSmpMSlBUQkpFU3lCcDVGOVhQb2tJSTE4V2Q1Y2tWb1JVYmRLYnRrMU9sS0pyQTVoUVZCOEkzSzJLeW9WSk9oeHhENE1temxjWUo3WkkxQU51MkZDZnNXcXJRNklVWkhVajdzWlhUQVJVX2J3ZkxqR0VTTVFNZ1BNY3p5QWdoV1lYU19nd0UyMkUtX0FwZzRFNzEzcldVSjBZcXhWMXpReUZ3WUZBUkVCQlB1VE9xOHFZc1VNZnVPeER1cmRiNmoyai1FcG0wX3BoUHVUSVZVbk5wRHpldE9SWnZielpXaGk0cFVCWkRJeEIyUGZnMU9nVEtfOVl5UTBYT3E4RkI4eHNmellydXo2UmNYWURyMEdkX2ZFWlVfOGl4WkJUb0phamxGMHRpaXp5bkZuMFhYOGtTS3Q1dEJzdVhLaU1tZnpaU29LWFpzUGQ2Wktaai0wc0RRVlJ0RWltcWdxNzR3NGg3aXBOaWZHMVNLZ0FfTzF0X2xab2lsTlJXa18ydE5iRnM0bHlYR3E4VDlSdmZvVDNWdTFzWjhHNGcwaUEzcXVnaElvN2pUTlBGXy1kVDNvTGo1c2lRWnVPNFhxUW1BOUZMWWpNNjViU0swdmRESzVaTmRmVUtYMG1UbWtib01oZkhtRG01WDJiMUJaMjBHcXpqNkx0LTdRejZsWEpFVl9yenh5UDJXbzRFbXZQeFVVeUpZVlQ5a3VvV3Y2QUNmLXplTTJRekVNeUlpRVUwd0dlMUNMS2pNUVdzTEFpVC1oSEd5ZEZWUVp6WEFTWng3dThsYTV6U1Jnb1BFRGY4V3RvUDlTT2w0ZGs4MHdGa25VQk14LWV6M25aMnFrNm5NWU16ZFdkdk54dURKMGEwaEUtQ0V6enJpZ0xFdWdhcmZpVVpiQzBwcEdmQVQyTi1VWEUzNHc5NGk3VVB0SFBVc3I1MXBXdjc5cEZEcENnVU9JLWRRdTFYcWlBSDBfdld5cWdySEh5aXlSNXhkc2N5Vk1EbldScTIxTjdpdDJ1My1ESy1YamNHQzNLSVFUUlM0cVVQNk95bUg4OG5UaTRWeW9LY0pRTjFEaUpNZHNmZVdnVlRtZnI3akhGMHJtUFBQZDk1Z1VjNkFCN3BEaTJlakIyUk9CSEgxQjRXUm45Um9ZcjRpNUlnR250cjV2T0E1ZTF0ak9tT1RFaG56bElBMmlGdkowYjZMU3RQMElSTWhsbk9kYlpub012Y2JJaEgzN2Z1aUw4MFk3RHRGTjJld2hwNUJsYjFYM1JLZ2tQU3E2bjhuN0x1YWRWcFlhM1V5MDYwcTVXUE1wcnpSQ0N0elVJQWFXMzREWjVUaG5CbnBuNFJxT3VPTzRzX04tUEFTdXRTc3piUzFER3BjbGRqT0Njc3ZRUDdSRGVzNTl0RFNIaEhCajNnTlN3c3l3aWltVVNvQ3dFclJpLXM3T09ERmZMMk5hTF80dWVoa1JuWjNET3l2ZlJVci1jRVN0MjFrUXRHYllMQ2NWS3N5d3B3RXptbTQ4TUZFNDRWeVpWVnk0RW9KaldFc2NIUzB3ZGt2UDU0NjdZWkJ2WGN2TzlNY0lhTEdMXzNraTFHMkpsSkhCZEc3WGxsczRVWHVtcXFiM3FpdEpxa0ZNMEFqZ1VvZVFMZlJ5d3hjYU80VWdwU0hkMnEtVU56TnVYb0p0LVd4U3lSUzA0RDJJMHBvNUJMZkdFRHdqYkpOSGY3MExBV3RObDljT1ZjeFpkZWo3cEdOaXJSbC1XeUlPZDNCbkFXcHJ5cng2NlRwTGxseTZJeTBGdmZNeV9jRlJqY2Vac3lmWUVMVjVOWjVFRUdQSmVOcmVTR183aWNMbjNWSmxkM2FOWTRFRmY1TUlOaEZJRDhtTGhiU2ZfaTN6LUtldkJYMnByY29iZ2pJM2E1SU9YdW1VeDZpT3Jqb3RKbkRaVlRtM1JCcmFrYy10Zk1kU2JtWko3ZjBmMHZMUGQ1ZC1ISHpCZlJmVTdvV0FLR2JhdkhXTEo3U1RNLWlNamY2QjIySHBVTUJMQmVqV3FpbjNoaEpUQkE4eFdZczZIaENXWWhSYTlIaERLR29VUVJwSXZzWExCcmpMTjJkQTdhaHU0VjBHdjEtM1NaUzNhbjM0bDROYllrRGNZa3hnc2NkYWlQMXp6SWZrVmxjWHVvWFl6a1E5UDVwMXUxaUtvYXhHRFQ4WkR2VVNyc2h4V3BMOFYxUWg4UVFWOEd4bFNJSXJsX0s3SGFuZjFYRHMxMktCTG1HcnV5eFVlS1l6MlVVTmxFN1NTREdCREJjQWh2STRTZ3c4dV9tQjFueUtGdlNPSWJFTDFlY3FhRVBQRmRnRGFwMnBfa00tTHhDZWdNbFFxOEtHMFNQVzhiRUlKaUtPdTcyTS13bWlOZTNLZmwyNDdlTXhkbFNQd01jdFpveHFEWDNyTm56czY4Ny1IaUNhaVpUUzlvM2xnc3o4ZmtwZ3h4OVZJY2Nwa05lanlhM24wa3NXR0ZNSVE3a2ZrdTg2NWJwZ0U4NndqY1U0YTNfenBnTG1Ob2RzQmJOd21tR2hDd3h3bVlLQktGazhGRUVLNTRRenVMN1dLbTVDd04xeEdDMFhtUGxNU2wwSEc0NVFTVXd0cXROdTllbUkxVFJBUGExZG1FdGMxV0l6Skc5Xy1RV2dIZHdaX3JpdFY0SE5KbF85dW1xYUdENXJ5RkRJc1VKLTkwM3FNMk83YS1aVmxqN1pUdkM1VFdVd3FiRlZaRTVuTldpMUN3dFBBWFZFVy1NUmNBZGNlYVJKQ2x5SkV1LXZKRnhrdklyOGg4bld3TEh4NGdLOHljUTJTa0VrXzctQmVTZWxHZWVBMXFxcnRfRzZFQURBQ0RubjRmU0hsbjNRXzUzZHQ1alhrZ2pYRHFDRXVvanZzTmxpZjNlV2VWZ0E5ZnA1ZjJGaXc1SU9OYks2OXJoWDZOS1poOEU5Y2pTaDMyRnplUXM4ZUZmOTdGS2tCYTZ5TXhWd081X0t5RVItYVl1RzQyNGNGbkFaN2lBalFnUE9yZW1VQTVTX05FNTVyOTk2WUNfcm9jTlpidzB5NFFjYzZIRjJQTm14a3ljSm1VYVBvRVdGOW56eEdObG9TVmVTUERxVGg5d3N1OUxTRS1PUUFUWVdidmM2eVhsNzlVQi1vMFRCeTlYNTBCZ0tkRU9Vc1dYLXR3TEgzcUFxTXcwLl9CTnRZTW00X3RXcmgycFFUeXFJYlVCakNyemtOVXMzdUZvc25rRHI5bk92TXNPUFBsSjdkajdrcUM4d1llMEN4aWpWeTdCUmR3cUMtdDN3WkFSMExR"><input type="hidden" name="_eventId" value="submit"><input type="hidden" name="geolocation"></section>
+                    
+                    <div>
+
+        <button class="mdc-button mdc-button--raised" name="submit" accesskey="l" type="submit" value="LOGIN">
+            <span class="mdc-button__label">LOGIN</span>
+        </button>
+
+        </div>
+
+                    </form>
+
+                <div id="pmlinks" class="my-2">
+        <div>
+            <br><span class="fa fa-question-circle"></span>
+            <span><a href="https://sso.universite-paris-saclay.fr/pwdmgmt">Forgot your password? </a></span>
+        </div>
+    </div>
+
+                <script type="text/javascript">
+                    /*<![CDATA[*/
+                    var i = "One moment please..."
+                    var j = "LOGIN"
+                        /*]]>*/
+                        $(window).on('pageshow', function () {
+                            $(':submit').prop('disabled', false);
+                            $(':submit').attr('value', j);
+                        });
+                    $(document).ready(function () {
+                        $("#fm1").submit(function () {
+                            $(":submit").attr("disabled", true);
+                            $(":submit").attr("value", i);
+                            return true;
+                        });
+                    });
+                </script>
+
+                
+            </div>
+            <div id="sidebar">
+            <div class="sidebar-content">
+                <p>For security reasons, please <a href="https://sso.universite-paris-saclay.fr/cas/logout">log out</a> and exit your web browser when you are done accessing services that require authentication!</p>
+            </div>
+        </div>
+        </div>
+            </section>
+            </div>
+    </div>
+    </main>
+</div>
+
+<footer class="py-4 d-flex justify-content-center cas-footer">
+       <div class="UPSfooter">
+                                <a href="https://www.universite-paris-saclay.fr/">© Université Paris-Saclay </a>
+                                <span style="border-left: 1px solid;padding: 0 1em;">Etablissement public national</span>
+        </div>
+        <div class="UPSfooter rightFoot">
+                     <a href="https://www.universite-paris-saclay.fr/luniversite/les-campus/plans-des-campus-et-transports">Plan des campus</a>
+                     <a href="https://www.universite-paris-saclay.fr/mentions-legales">Mentions légales</a>
+                     <a href="https://www.universite-paris-saclay.fr/contact">Contact</a>
+         </div>
+        
+</footer>
+
+
+
+</body></html>

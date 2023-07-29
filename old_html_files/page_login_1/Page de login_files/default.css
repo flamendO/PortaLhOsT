@@ -1,0 +1,586 @@
+/**********************************************
+ * Conventions de dénomination des styles CSS *
+ *   TYPE OBJET . NOM PAGE _ NOM STYLE        *
+ *   Pour la page de login :				  *
+ *		.login_t	    : texte               *
+ *		.login_tblanc   : texte blanc         *
+ *		.login_tblanc_g : texte blanc gras    *
+ **********************************************/
+
+/*************
+ *   Liens   *
+ ************/
+
+
+A.lienRouge, DIV.lienRouge { color: #FF0000; }
+A.lienRouge:Visited { color: #FF0000; }
+A.lienRouge:Active  { color: #FF0000; }
+A.lienRouge:Hover   { color: #FF0000; }
+
+A.lienRougeSansDeco, DIV.lienRougeSansDeco { color: #FF0000; text-decoration: none; }
+A.lienRougeSansDeco:Visited { color: #FF0000; text-decoration: none; }
+A.lienRougeSansDeco:Active  { color: #FF0000; text-decoration: none; }
+A.lienRougeSansDeco:Hover   { color: #FF0000; text-decoration: underline; }
+
+A.lienVert, DIV.lienVert { color: #009900; }
+A.lienVert:Visited { color: #009900; }
+A.lienVert:Active  { color: #009900; }
+A.lienVert:Hover   { color: #009900; }
+
+A.lienVertSansDeco, DIV.lienVertSansDeco { color: #009900; text-decoration: none; }
+A.lienVertSansDeco:Visited { color: #009900; text-decoration: none; }
+A.lienVertSansDeco:Active  { color: #009900; text-decoration: none; }
+A.lienVertSansDeco:Hover   { color: #009900; text-decoration: underline; }
+
+A.lienBlanc         { color: #FFFFFF; }
+A.lienBlanc:Visited { color: #FFFFFF; }
+A.lienBlanc:Active  { color: #FFFFFF; }
+A.lienBlanc:Hover   { color: #FFFFFF; }
+
+A 			{ color: #0000FF }
+A:Visited	{ color: #0000FF }
+A:Active	{ color: #0000FF }
+A:Hover		{ color: #0000FF }
+ 
+A.lienNoir  { color: #999999; font-size: 8pt; }
+A.lienNoir:Visited { color: #999999; font-size: 8pt; }
+A.lienNoir:Active  { color: #999999; font-size: 8pt; }
+A.lienNoir:Hover   { color: #999999; font-size: 8pt; }
+
+
+/************************
+ *   Corps des pages    *
+ ***********************/
+
+body {
+	background : white;
+	margin: 0px 0px 0px 0px;
+}
+
+body, p, td, th, form {
+	font-family: Arial, sans-serif;
+	font-size: 12px;
+}
+
+input, select, textarea {
+	font-family: Arial, sans-serif;
+	font-size: 12px;
+}
+
+/***********
+ * Communs *
+ ***********/
+/****  j'ai modifié ici****/
+.test {position: sticky; margin: 10px 100px 10px 8px; right: 0px;}
+.commun_trTitre  { background-color: #BFCFE9; position: relative; margin: 10px 100px 10px 8px;  }
+.commun_tdTitre  { color: #666699; font-size: 16px; height: 46; font-weight: bold; text-align: right; }
+.MyElis { width: 0px;  padding-top:0px; padding-bottom:0px; border: 3px blue #A0A0A0; text-align: center; position: relative; margin: 10px 100px 10px 8px; background-color: #8080802e; font-size: smaller; }				 
+
+.commun_tdBouton { background-image: url("./images/boutons/bouton_fond.gif"); background-repeat: no-repeat; background-color: #FFFFFF;  color: #333333; font-size: 12px; font-weight: bold; }
+.transp_tdBouton { background-image: url("./images/boutons/bouton_fond_transp.gif"); background-repeat: no-repeat; background-color: #FFFFFF;  color: #333333; font-size: 12px; font-weight: bold; }
+.commun_tdBoutonInactif { background-image: url("./images/boutons/bouton_fond_transp.gif"); background-repeat: no-repeat; background-color: #CCCCCC;  color: #333333; font-size: 12px; font-weight: bold; }
+
+.commun_TitreRouge { color: #CC0000; font-size: 18px; font-weight: bold; }
+.commun_TitreRougePetit { color: #FF0000; font-size: 16px; font-weight: bold; }
+.commun_TitreRougeTresPetit { color: #FF0000; font-size: 12px; font-weight: bold; }
+.commun_tbleu      { color: #6666FF; font-size: 12px; font-weight: bold; }
+.commun_TitreNoir  { color: #000000; font-size: 18px; font-weight: bold; }
+.commun_TitreNoirPetit  { color: #000000; font-size: 14px; font-weight: bold; }
+.commun_TitreNoirTresPetit  { color: #000000; font-size: 12px; font-weight: bold; }
+
+div.hautDePage { text-align: right; font-size: 10px; }
+.msgIndispoAppli { color: #13007C; font-weight: bold; text-align: center; border: solid 1px black; }
+
+.commun_cadrePleinJaune {
+	background-color : #FFFF66; padding:4px; margin:0px;
+}
+
+/****************************
+ * fao:Communs Mesasge Vert *
+ ****************************/
+.commun_messageVert {
+	color : #008000 !important;
+}
+.commun_messageVert:first-letter {
+	text-transform: capitalize !important;
+}
+.commun_hr {
+	border: 0;
+	border-top: 1pt dotted #666666;
+}
+
+/************
+ * Tableaux	*
+ ************/
+
+.liste_trTitre  { background-color: #FFFFFF; }
+.liste_trEntete, .detail_tdEntete { background-color: #666699; }
+.liste_trLigne1 { background-color: #FFFFFF; }
+.liste_trLigne2 { background-color: #EEEEFF; }
+.liste_trEnteteRouge { background-color: #996666; }
+.liste_trLigne1Rouge { background-color : #FFFFFF; }
+.liste_trLigne2Rouge { background-color : #FFEEEE; }
+.liste_trTotal {background-color: rgb(191,207,233);font-weight:bold; }
+
+.liste_tdEntete     { color: #FFFFFF; font-size: 12px; height: 20; font-weight: bold; text-align: center; }
+.liste_tdEnteteLeft { color: #FFFFFF; font-size: 12px; height: 20; font-weight: bold; text-align: left;   }
+.liste_tdEnteteBgColorLeft  { color: #FFFFFF; font-size: 12px; height: 20; font-weight: bold; text-align: left; background-color: #666699; }
+.liste_tdEnteteBgColor      { color: #FFFFFF; font-size: 12px; height: 20; font-weight: bold;                   background-color: #666699; }
+.liste_tdEnteteBgColorClair { color: #FFFFFF; font-size: 12px; height: 20; font-weight: bold; text-align: center; background-color: #00D9D9; }
+.liste_tdLigne1 { color: #000000; font-size: 12px; height: 20; }
+.liste_tdLigne2 { color: #000000; font-size: 12px; height: 20; }
+
+.liste_tdEnteteCompteClient { color: #000000; font-size: 16px; height: 20; font-weight: bold; background-color: #BFCFE9; }
+.liste_tdEnteteDossier { color: #000000; font-size: 16px; height: 15; background-color: #BFCFE9; }
+.liste_tdEnteteImagesArbo { height: 15; background-color: #BFCFE9; }
+
+
+.detail_tdEntete {color: #FFFFFF; font-size: 12px; height: 20; font-weight: bold;}	
+
+.liste_classEntete { background-color: #666699; color: #FFFFFF; font-size: 12px; height: 20; font-weight: bold; text-align: center; }
+.liste_classInTab { font-size: 20px; height: 20; }
+
+.liste_RegroupementArt { background-color: #00FFFF; }
+
+/* style de l'entete du tableau de layout:collection */
+th.liste_trLigne2 { color: #FFFFFF; background-color: #666699; }
+/* style de l'entete du tableau de layout:collection, pour la partie sortable=true */
+th.liste_trLigne2 td { color: #FFFFFF; font-weight: bold; background-color: #666699; }
+
+.entete {
+	background-color: #666699;
+	color: #FFFFFF; 
+	font-size: 12px; 
+	height: 20; 
+	font-weight: bold; 
+	text-align: center;
+}
+
+/**********************
+ * Largeur des Select *
+ *********************/
+
+.select_280 { width: 280; }
+.select_230 { width: 230; }
+.select_300 { width: 300; font-size: 10px; }
+
+
+/*********************
+ *   Page de Login   *
+ ********************/
+
+.login_t       { color: #13007C; }
+.login_t_g     { color: #13007C; font-weight: bold; font-size:11pt;}
+
+
+/******************************************
+ *   Page de changement de mot de passe   *
+ ******************************************/
+
+.chgmdp_t      { color: #13007C; }
+.chgmdp_t_g    { color: #13007C; font-weight: bold; }
+
+/******************************************
+ *   Cumuls Resultats                     *
+ ******************************************/
+
+ /*en tete pour 2ieme tableau si plus de 6mois de resultats = melange de liste_trEntete et liste_tdEntete  */
+.liste_2iemeEnteteFgBg { background-color: #666699; color: #FFFFFF; font-size: 12px; height: 20; font-weight: bold; text-align:	center; }
+
+ /* en-tete de Total  */
+.cumuls_total { background-color: #9999FF; color: #000000; font-size: 12px; height: 20; font-weight: bold; }
+
+/********************************************
+ *  Couleurs de reference pour les tableaux *
+ *******************************************/
+
+TR.entete   { background-color: #D8E1E7; FONT-WEIGHT: bold; }
+TR.ligne1   { background-color: #E8F1F7; }
+TR.ligne2   { background-color: #C7DCEB; }
+
+/*******************************
+ *  background color to use to *
+ *  display the errors         *
+ ******************************/
+
+.ERROR   { color: #FF0000; font-size: 12px; font-weight: bold;}
+TD.ERROR { background-color: #ED4F50; }
+TD.PAGER { background-color: #3366A3; text-align: center; }
+
+/**************
+ * Popups     *
+ *************/
+
+.popupSimple {
+	/* Tout le popup à le même bgcolor */
+	FONT-WEIGHT: normal;
+	margin: -0px 0px 0px -0px;
+	COLOR: #053c6d;
+	BACKGROUND: #CCEBF4;
+	FONT-FAMILY: Arial, sans-serif;
+	FONT-SIZE: 12px;
+}
+
+/********************************************
+ * Onglets                                  *
+ *******************************************/
+
+.ongletMain {
+	BORDER-RIGHT: #80add6 0px solid;
+	BORDER-TOP: #80add6 0px solid;
+	BORDER-LEFT: #80add6 0px solid;
+	BORDER-BOTTOM: #80add6 0px solid;
+	BACKGROUND-COLOR: #FFFFFF;
+}
+
+/** Onglet actif **/
+.ongletTextEnaLeft  { background-image: url("./images/onglet/onglet_rouge_on_o.gif"); background-repeat : no-repeat; HEIGHT: 23px; width: 5px; }
+.ongletTextEnaRight { background-image: url("./images/onglet/onglet_rouge_on_e.gif"); background-repeat : no-repeat; HEIGHT: 23px; width: 5px; }
+.ongletTextEna 		{ background-image: url("./images/onglet/onglet_rouge_on_t.gif"); background-repeat : repeat-x;  FONT-WEIGHT: bold; FONT-SIZE: 10px; COLOR: #FFFFFF; FONT-FAMILY: verdana ; TEXT-ALIGN: center; }
+
+/** Onglets inactifs **/
+A.ongletTextDis:Visited, A.ongletTextDis:Active, A.ongletTextDis:Hover, A.ongletTextDis { text-decoration: none; background: none; }
+.ongletTextDisLeft  { background-image: url("./images/onglet/onglet_rouge_off_o.gif"); background-repeat : no-repeat; HEIGHT : 23px; width: 5px; }
+.ongletTextDisRight { background-image: url("./images/onglet/onglet_rouge_off_e.gif"); background-repeat : no-repeat; HEIGHT : 23px; width: 5px; }
+.ongletTextDis 		{ background-image: url("./images/onglet/onglet_rouge_off_t.gif"); background-repeat : repeat-x;	FONT-WEIGHT: normal; FONT-SIZE: 10px; COLOR: #000000; FONT-FAMILY: verdana; TEXT-ALIGN: center; }
+
+
+.ongletTextErr {
+	BORDER-RIGHT: #c5c5c5 1px solid;
+	BORDER-TOP: #c5c5c5 1px solid;
+	FONT-WEIGHT: bold;
+	FONT-SIZE: 10px;
+	BORDER-LEFT: #c5c5c5 1px solid;
+	COLOR: #FFFFFF;
+	BORDER-BOTTOM: #80add6 2px solid;
+	FONT-FAMILY: verdana;
+	BACKGROUND-COLOR: #ED4F50;
+	TEXT-ALIGN: center;
+}
+
+.ongletMiddle {
+	BORDER-RIGHT: #80add6 0px solid;
+	BORDER-TOP: #80add6 0px solid;
+	FONT-SIZE: 0px;
+	BORDER-LEFT: #80add6 0px solid;
+	BORDER-BOTTOM: #80add6 0px solid;
+	BACKGROUND-COLOR: #FFFFFF;
+}
+
+.ongletSpace {
+	BORDER-BOTTOM: #FFFFFF 0px solid;
+	BACKGROUND-COLOR: #FFFFFF;
+}
+
+.fakeLink {
+	color : #0000FF;
+}
+
+.fakeUnderlineLink {
+	color : #0000FF;
+	text-decoration : underline;
+}
+
+DIV.recherche {
+	background-color:#EEEEFF;
+	border:thin solid #EEEEFF;
+	margin-left:20pt;
+}
+
+.section {
+	background-color:#EEEEFF;
+	font-weight : bold;
+}
+
+.menuGrise {
+	color : #444444;
+}
+
+/*******************************************
+ * Module HBE                              *
+ *******************************************/
+ .titreHbe {
+	font-family: cursive, Arial;
+	font-size: 22px;
+	font-weight: bold;
+	color: #CC0000;
+}
+
+.enteteHbe {		
+	background-image: url("./images/hbe/onglet_bleu_on.gif");
+	background-repeat: repeat-x;
+	background-color: #637FB7;
+	color: #FFFFFF;
+	text-align: center;
+}
+
+table.hbe {
+	border-width: 1px;
+	border-style: solid;
+	border-color: #19037A;
+}
+
+table.hbe_infopdl {
+	border-width: 1px;
+	border-style: solid;
+	border-color: #19037A;
+	width: 100px;
+}
+
+table.hbeBgColor {
+	border-width: 1px;
+	border-style: solid;
+	border-color: #19037A;
+	background-color: #EE8213;
+	color: #FFFFFF;
+	
+}
+
+
+table.hbeBgColor_infopdl {
+	border-width: 1px;
+	border-style: solid;
+	border-color: #19037A;
+	background-color: #EE8213;
+	color: #FFFFFF;
+	width: 100px;
+}
+
+table.hbeRouge {
+	border: 0;
+	border-bottom: 1px solid #8C262C;
+	border-right: 1px solid #8C262C;
+	border-top: 1px solid #D9A491;
+	border-left: 1px solid #D9A491;
+}
+
+table.hbeQuadBleu {
+	background-color: #19037A;
+}
+
+tr.enteteHbeRouge {
+	background-image: url("./images/onglet/onglet_rouge_on_t.gif");
+	background-repeat: repeat-x;
+	background-position: 0 -1px;
+	color: #FFFFFF;
+	text-align: center;
+	background-color: #DC9A9C;
+}
+
+tr.enteteHbeRougeOff {
+	background-image: url("./images/onglet/onglet_rouge_off_t.gif");
+	background-repeat: repeat-x;
+	background-position: 0 -1px;
+	color: #000000;
+	text-align: center;
+	background-color: #FFFFFF;
+}
+
+tr.enteteRecherche {
+	height: 25px;
+	vertical-align: middle;	
+}
+
+tr.enteteRecherche .enteteHbe {
+	text-align: left;
+	padding-left: 9px;
+}
+
+tr.ligneHbe1 {
+	background-color: #FFFFFF;
+	color: #000000;
+}
+
+tr.ligneHbe2 {
+	background-color: #637FB7;
+	color: #FFFFFF;
+}
+
+td.boutonHbe {
+	font-family: Verdana;
+	font-weight: bold;
+}
+td.boutonHbe_infopdl {
+	font-family: Verdana;
+	font-weight: bold;
+	font-size: 12px;
+}
+
+td.boutonHbe .rougeFonce {
+	color: #AA0000;
+}
+
+td.barreGrise {
+	background-image: url('./images/hbe/barre_grise.gif');
+	background-repeat: repeat;
+}
+
+td.lienHbe {
+	color: #FFFFFF;
+	text-decoration: underline;
+	font-weight: bold;
+	cursor: pointer;
+}
+
+td.aideHbe {
+	color: #FFFFFF;
+	text-decoration: underline;
+	font-weight: bold;
+	cursor: help;
+}
+
+td.rechercheHbe {
+	background-color: #637FB7;
+	color: #FFFFFF;
+}
+
+td.cartouche {
+	font-weight:bold;
+}
+
+/* Bulles d'informations */
+div.infoBulleVisible {
+	width: 230px;
+	padding: 5px 0px 5px 10px; 
+	display: block;
+	background-color: #FFFFFF;
+	border-width: 1px;
+	border-style: solid;
+	border-color: #EE8213;
+	font-family: Verdana;
+	font-size: 11px;
+	color: #000000;
+	z-index: 99;
+}
+
+div.infoBulleInvisible {
+	display: none;
+}
+
+/*******************************************
+ * Module VT                               *
+ *******************************************/
+ /* Bulle d'information */
+div.infoBulleVisibleVT  {
+	width: 230px;
+	padding: 5px 0px 5px 10px; 
+	display: block;
+	background-color: #FFFF99;
+	border-width: 1px;
+	border-style: solid;
+	border-color: #000000;
+	font-family: Verdana;
+	font-size: 11px;
+	color: #000000;
+	z-index: 99;
+}
+
+/*******************************************
+ * Statistiques Court Sejour               *
+ *******************************************/
+
+.ligneStat1 {
+	background-color: #637FB7;
+	color: #FFFFFF;
+	padding-left: 2px;
+}
+
+.ligneStat2 {
+	/* background-color: #FFFF99;*/
+	background-color: #F0D4A1;
+	color: #000000;
+	padding-left: 2px;
+}
+
+.enteteTabStat {
+	background-image: url("./images/hbe/onglet_bleu_on.gif");
+	background-repeat: repeat-x;
+	background-color: #637FB7;
+	color: #FFFFFF;
+	text-align: center;
+	font-weight: bold;
+}
+
+.separationHorizontale {
+	background-image: url("./images/separateurs/pointille.png");
+	background-repeat: repeat-x;
+}
+
+.messageAvertissement {
+	font-family: Verdana;
+	color: #DB2819;
+}
+
+.messageOK {
+	font-family: Verdana;
+	/*color: #66CC33;*/
+	color: #009900;
+}
+
+.messageInfo {
+	font-family: Verdana;
+	color: #000000;
+	text-decoration: underline;
+	/*font-weight: bold;*/
+}
+
+/*******************************************
+ * Module Selfcare               *
+ *******************************************/
+
+
+.enteteTabSelfcare {
+
+	background-color: #666699;
+	color: #FFFFFF;
+	text-align: center;
+	font-weight: bold;
+	font-size:13px;
+}
+
+.enteteTabSelfcareBorder {
+
+	background-color: #666699;
+	color: #FFFFFF;
+	text-align: center;
+	font-weight: bold;
+	font-size:13px;
+	border: 1px solid black ;
+}
+
+.enteteCltSelfcare {
+	background-color: #BFCFE9;
+	font-weight: bold;
+	width:400px;
+	font-size:13px;
+	height: 15px;
+}
+
+.entetePtlSelfcare {
+	background-color: #BFCFE9;
+	width:400px;
+	font-size:13px;
+	height: 15px;
+}
+
+
+.ongletSelfcare {
+	
+	border:1px solid #8C262C;
+	margin-top:-1; 
+	margin-left:1;
+	padding:10px;
+	position: relative;
+	width:100%;
+	
+}
+
+.liste_tdEnteteCompteClient { color: #000000; font-size: 14px; height: 20; font-weight: bold; background-color: #99CCFF; }
+.liste_tdEnteteDossier { color: #000000; font-size: 14px; height: 15; background-color: #99CCFF; }
+.liste_tdEnteteImagesArbo { height: 15; background-color: #99CCFF; }
+
+.champReadOnly {
+background-color:#E3E4E1;
+}
+
+.liste_tri { background-color: #FFFFFF;color: black; }
