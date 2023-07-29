@@ -1,0 +1,148 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+	<title>Page de login</title>
+	<meta name="Version WAR" content="@@@ ANT GENERATION @@@">
+	<link rel="stylesheet" href="Page%20de%20login_files/default.css" type="text/css">
+	<script type="text/javascript" src="Page%20de%20login_files/javascript.js"></script>
+	<script type="text/javascript" src="Page%20de%20login_files/JSCalendrier.js"></script>
+	<script type="text/javascript" src="Page%20de%20login_files/JSDate.js"></script>
+	<script type="text/javascript" src="Page%20de%20login_files/JSMenu.js"></script><style type="text/css">#menu { position:absolute;top:59;left:0; }</style>
+	<script type="text/javascript" src="Page%20de%20login_files/JSNSResize.js"></script>
+	<script type="text/javascript" src="Page%20de%20login_files/JSPopup.js"></script>
+	<script type="text/javascript" src="Page%20de%20login_files/JSTransfertListes.js"></script>
+	<!-- base href="https://elisweb.com/ElisV1/" -->
+</head>
+<body>
+
+
+
+
+
+
+
+	<form name="loginForm" method="post" action="/ElisV1/login.do" style="background-image:url(images/carteEurope.jpg);background-repeat:no-repeat;background-position:50% 0%">
+		<input type="hidden" name="dispatch" value="onValider">
+		<input type="hidden" name="screenSize" value="1920 * 976">
+		
+		
+			<input type="hidden" name="contextApplication" value="seule">
+		
+		<br><br><br><br><br><br><br><br><br><br><br>
+		
+		<table width="42%" cellspacing="0" cellpadding="5" border="0" align="center"><tbody><tr>
+			
+			<td colspan="3" align="center">
+				
+				 
+			</td>
+
+	
+			
+	
+			
+			</tr><tr><td class="login_t_g" width="50%" align="right">
+				Login</td>
+
+			<td class="login_t">
+				
+				<input type="text" name="login" size="20" autocomplete="off"></td>
+
+			<td>&nbsp;</td>
+
+	
+			
+			
+				</tr><tr><td class="login_t_g" width="50%" align="right">
+					Mot de passe
+				</td>
+
+				
+				<td class="login_t">
+					<input type="password" name="pass" size="20" maxlength="20" autocomplete="off">
+				</td>
+
+				<td>&nbsp;</td>
+
+			
+
+			
+			
+			
+			</tr><tr><td colspan="3" align="center">&nbsp;</td>
+
+	
+			
+			</tr><tr><td>&nbsp;</td>
+
+			<td align="center">
+				
+				
+					<table width="113" cellspacing="0" cellpadding="0" border="0"><tbody><tr>
+<td width="13" height="23"><input type="image" src="Page%20de%20login_files/bouton_g_transp.gif" onclick="document.forms[0].dispatch.value='onValider'" width="13" height="23" border="0"></td>
+<td class="transp_tdBouton" style="background-color:transparent;" width="100%" nowrap="nowrap" height="23">
+<script type="text/javascript">
+	var clickbouton_valider = false;
+	function checkDoubleClickbouton_valider(in_lien) {
+		if(!clickbouton_valider) {
+			clickbouton_valider = true;
+			in_lien.href="javascript:document.forms[0].dispatch.value='onValider';document.forms[0].submit();";
+		} else {
+			in_lien.target='ext';
+			in_lien.href='html/doubleClick.html';
+		}
+	}
+</script>
+<a style="font-size:12pt;" href="javascript:void(0);" onclick="checkDoubleClickbouton_valider(this)">Valider</a></td>
+</tr></tbody></table>
+				
+			</td>
+	
+		</tr></tbody></table>
+	
+		<br><br><br><br><br><br>
+		<table width="25%" cellspacing="0" cellpadding="5" border="0" align="center"><tbody><tr>
+			<td colspan="3" align="center">
+				<font class="login_t" size="-2">
+					
+					
+						Vous avez perdu votre mot de passe ?<a href="javascript:document.forms[0].dispatch.value='onMotPassePerdu';document.forms[0].submit();">Cliquez ici</a>
+					
+				</font>
+			</td>
+
+		</tr></tbody></table>
+		<br><br>
+		<table width="25%" cellspacing="0" cellpadding="5" border="0" align="center"><tbody><tr>
+		<td colspan="3" align="center">
+		<font class="login_t">
+			V1.11.40
+		</font>
+		</td>
+
+		</tr></tbody></table>
+	</form>
+
+
+
+
+
+
+
+<script type="text/javascript">
+	document.forms[0].elements["screenSize"].value = screen.width+" * "+screen.height;
+
+	
+
+	
+		var eltLogin = document.forms[0].elements["login"];
+		eltLogin.focus();
+	
+
+</script>
+
+
+
+
+
+</body></html>

