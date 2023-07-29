@@ -26,4 +26,8 @@ sudo chmod +x setup.sh && ./setup.sh
 
 - The *html_files* folder contains all the web page templates to copy. You can add your pages in this folder as you want. Note that The *Git folder* already contains templates
 - Once done, start the program in root mode and follow **the numbers**. Please note that you must have a **wifi adapter** to create the wifi access point.
-- During the attack, please note that in order to stop, you have to do **CTRL+C two times !** 
+- During the attack, please note that in order to stop, you have to do **CTRL+C two times !**
+
+# Templates
+
+In the folder, you have for now two web pages but you can add as you want new pages, **ALWAYS IN THE FOLDER html_files**
